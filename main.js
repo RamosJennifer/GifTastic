@@ -37,7 +37,8 @@ function displayAnimalInfo() {
 }
 
 function renderButtons() {
-    $("animal-view").empty();
+    
+    $("#buttons-view").empty();
 
     for (var i = 0; i<topic.length; i++) {
 
@@ -59,6 +60,7 @@ $("#add-animal").on("click", function(event) {
     event.preventDefault();
     // This line grabs the input from the textbox
     var animal = $("#animal-input").val().trim();
+    $("#animal-input").val("");
 
     // Adding movie from the textbox to our array
     topic.push(animal);
